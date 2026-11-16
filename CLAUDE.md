@@ -21,3 +21,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - ES modules (`"type": "module"`), so relative imports need the `.js` extension.
 - Code style: no semicolons, double quotes, 2-space indent.
+
+## Rules
+
+- Every new category or rule needs a test with a ticket that also matches an older rule.
