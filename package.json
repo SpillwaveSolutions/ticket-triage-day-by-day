@@ -1,0 +1,5 @@
+{
+  "name": "ticket-triage",
+  "type": "module",
+  "scripts": { "test": "node --test" }
+}
