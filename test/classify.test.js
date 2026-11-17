@@ -9,3 +9,5 @@ test("damaged", () => assert.equal(classify("My package arrived crushed"), "dama
 test("water damage", () => assert.equal(classify("The box has water damage"), "damaged"))
 test("cancel", () => assert.equal(classify("Please cancel my order"), "cancel"))
 test("cancel loses to older rules", () => assert.equal(classify("Cancel my order and refund me"), "refund"))
+test("return", () => assert.equal(classify("I want to return this"), "refund"))
+test("return beats shipping", () => assert.equal(classify("I want to return this package"), "refund"))
