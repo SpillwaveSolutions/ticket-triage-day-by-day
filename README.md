@@ -3,6 +3,12 @@
 Ticket Triage classifies support tickets as `refund`, `shipping`, or `other`.
 Refund takes priority over shipping, including when a ticket describes damage.
 
+## Batch classification
+
+`classifyMany(tickets)` returns an array of categories for the ticket strings.
+It preserves input order and leaves the input array unchanged. Empty input (`[]`)
+returns `[]`.
+
 Run the tests from the project directory:
 
 ```sh
