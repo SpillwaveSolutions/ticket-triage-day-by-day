@@ -1,3 +1,7 @@
+export function isUrgent(text) {
+  return priority(text) === "high"
+}
+
 // Rates a support ticket's priority as high or normal.
 export function priority(text) {
   const t = text.toLowerCase()
