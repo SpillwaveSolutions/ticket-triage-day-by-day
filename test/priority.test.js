@@ -17,3 +17,4 @@ test("independent of category", () => {
   assert.equal(classify("Refund me immediately"), "refund")
   assert.equal(priority("Refund me immediately"), "high")
 })
+test("critical", () => assert.equal(priority("This is critical"), "high"))
