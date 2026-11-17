@@ -3,6 +3,10 @@
 Ticket Triage classifies support tickets as `refund`, `shipping`, or `other`.
 Refund takes priority over shipping, including when a ticket describes damage.
 
+## Examples
+
+"My package is late; I want my money back" → `refund`.
+
 ## Batch classification
 
 `classifyMany(tickets)` returns an array of categories for the ticket strings.
