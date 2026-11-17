@@ -1,0 +1,5 @@
+{
+  "name": "tt-triage-kit",
+  "version": "0.1.0",
+  "description": "Ticket Triage helpers: the tt-add-keyword skill and the tt-reviewer subagent."
+}
