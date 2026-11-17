@@ -9,7 +9,12 @@ test("other", () => assert.equal(classify("Hello"), "other"))
 test("shipping crushed mug", () =>
   assert.equal(
     classify("The box showed up crushed and the mug inside is in pieces"),
-    "shipping",
+    "damaged",
+  ))
+test("damaged with refund request is refund", () =>
+  assert.equal(
+    classify("The mug arrived crushed and I want my money back"),
+    "refund",
   ))
 test("shipping parcel", () =>
   assert.equal(classify("My parcel never came"), "shipping"))
