@@ -1,0 +1,1 @@
+{"type":"object","properties":{"head":{"type":"string"},"tests_passed":{"type":"integer"},"clean":{"type":"boolean"},"ready":{"type":"boolean"},"reason":{"type":"string"}},"required":["head","tests_passed","clean","ready","reason"],"additionalProperties":false}
