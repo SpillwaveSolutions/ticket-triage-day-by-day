@@ -10,6 +10,7 @@ test("normal", () => assert.equal(priority("Where is my package?"), "normal"))
 test("uppercase", () => assert.equal(priority("URGENT: box crushed"), "high"))
 test("mixed case", () => assert.equal(priority("Need it ASAP"), "high"))
 test("urgently (substring)", () => assert.equal(priority("I urgently need help"), "high"))
+test("asap with punctuation", () => assert.equal(priority("Please answer ASAP!!"), "high"))
 test("empty string", () => assert.equal(priority(""), "normal"))
 test("independent of category", () => {
   assert.equal(classify("Refund me immediately"), "refund")
