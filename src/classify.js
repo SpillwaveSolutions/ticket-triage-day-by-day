@@ -6,3 +6,7 @@ export function classify(text) {
   if (t.includes("shipping") || t.includes("delivery") || t.includes("package") || t.includes("crushed") || t.includes("broken") || t.includes("in pieces")) return "shipping"
   return "other"
 }
+
+export function classifyMany(tickets) {
+  return tickets.map(classify)
+}
