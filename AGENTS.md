@@ -1,0 +1,3 @@
+- Run `npm test` before you say a change is done.
+- Source code is in `src/`. Tests are in `test/`.
+- Every new keyword gets its own test, named after the keyword.
