@@ -28,3 +28,5 @@ test("shattered", () =>
   assert.equal(classify("The glass arrived shattered"), "damaged"))
 test("smashed", () =>
   assert.equal(classify("The box arrived smashed"), "damaged"))
+test("squashed", () =>
+  assert.equal(classify("The box arrived squashed"), "damaged"))
