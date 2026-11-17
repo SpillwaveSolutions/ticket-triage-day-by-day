@@ -6,6 +6,7 @@ import { classify } from "../src/classify.js"
 test("urgent", () => assert.equal(priority("This is urgent"), "high"))
 test("asap", () => assert.equal(priority("Please reply asap"), "high"))
 test("immediately", () => assert.equal(priority("Fix this immediately"), "high"))
+test("mixed-case \"Immediately\"", () => assert.equal(priority("Cancel my order Immediately."), "high"))
 test("normal", () => assert.equal(priority("Where is my package?"), "normal"))
 test("uppercase", () => assert.equal(priority("URGENT: box crushed"), "high"))
 test("mixed case", () => assert.equal(priority("Need it ASAP"), "high"))
