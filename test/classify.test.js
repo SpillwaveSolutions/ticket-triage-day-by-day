@@ -11,3 +11,5 @@ test("shipping crushed mug", () =>
     classify("The box showed up crushed and the mug inside is in pieces"),
     "shipping",
   ))
+test("shipping parcel", () =>
+  assert.equal(classify("My parcel never came"), "shipping"))
