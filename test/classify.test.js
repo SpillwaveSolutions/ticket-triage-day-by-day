@@ -20,3 +20,5 @@ test("shipping parcel", () =>
   assert.equal(classify("My parcel never came"), "shipping"))
 test("dented", () =>
   assert.equal(classify("The can arrived dented"), "damaged"))
+test("chipped", () =>
+  assert.equal(classify("The plate arrived chipped"), "damaged"))
