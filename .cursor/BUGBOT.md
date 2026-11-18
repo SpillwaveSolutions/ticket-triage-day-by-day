@@ -1,0 +1,1 @@
+- Every new keyword in src/classify.js has a test in test/classify.test.js named after the keyword.
