@@ -6,5 +6,6 @@ export function classify(text) {
   if (t.includes("shipping") || t.includes("delivery") || t.includes("package")) return "shipping"
   if (t.includes("cancel")) return "cancel"
   if (t.includes("charge") || t.includes("invoice")) return "billing"
+  if (t.includes("unsubscribe")) return "cancel"
   return "other"
 }
