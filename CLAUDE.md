@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-`ticket-triage`: a minimal Node.js ES-module library that classifies support-ticket text into a category (`"damaged"`, `"refund"`, `"shipping"`, `"cancel"`, or `"other"`). No dependencies, no build step, no linter configured.
+`ticket-triage`: a minimal Node.js ES-module library that classifies support-ticket text into a category (`"damaged"`, `"refund"`, `"shipping"`, `"cancel"`, `"billing"`, or `"other"`). No dependencies, no build step, no linter configured.
 
 ## Commands
 
@@ -14,7 +14,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture
 
-- `src/classify.js` exports `classify(text)`. It lowercases the input and does ordered keyword matching with `includes()`. **Rule order matters**: the first matching category wins (damaged → refund → shipping → cancel), so a ticket mentioning both "crushed" and "refund" is classified as `"damaged"`. Anything unmatched falls through to `"other"`.
+- `src/classify.js` exports `classify(text)`. It lowercases the input and does ordered keyword matching with `includes()`. **Rule order matters**: the first matching rule wins (damaged → refund → shipping → cancel → billing → unsubscribe-as-cancel), so a ticket mentioning both "crushed" and "refund" is classified as `"damaged"`. The "unsubscribe" rule returns `"cancel"` but is checked after billing, so "unsubscribe me, there's a charge I don't recognize" is classified as `"billing"`. Anything unmatched falls through to `"other"`.
 - `test/classify.test.js` uses `node:test` + `node:assert/strict` with one-line `test(...)` cases per category. Add new cases in the same style.
 
 ## Conventions
