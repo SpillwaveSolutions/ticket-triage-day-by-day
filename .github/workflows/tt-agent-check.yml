@@ -1,0 +1,28 @@
+name: tt-agent-check
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  agent-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install the Cursor CLI
+        run: |
+          curl https://cursor.com/install -fsS | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          echo "$HOME/.cursor/bin" >> "$GITHUB_PATH"
+      - name: Ask the agent for the test count
+        env:
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+        run: |
+          cursor-agent -p --trust --output-format json "Run npm test and report the pass count. Do not edit files." > agent.json
+          cat agent.json
+          node -e 'const r = require("./agent.json"); if (r.is_error) process.exit(1)'
+      - name: Run the tests without the agent
+        run: npm test
