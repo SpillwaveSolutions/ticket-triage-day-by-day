@@ -1,17 +1,23 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "permissions": [
-    // Ask before any read, edit, or shell command reaches outside the project.
-    { "action": "external_directory", "resource": "*", "effect": "ask" },
 
-    // Shell: ask by default, allow three routine commands, never push.
+  // The default model for build and for any agent without its own model.
+  "model": "google/gemini-4-hydrogen",
+
+  "agents": {
+    // Searches that build hands off: the parent checks the result.
+    "explore": { "model": "google/gemini-3.5-flash-lite" },
+    // Session titles: one short line, no tools.
+    "title": { "model": "google/gemini-3.5-flash-lite" },
+  },
+
+  "permissions": [
+    { "action": "external_directory", "resource": "*", "effect": "ask" },
     { "action": "shell", "resource": "*", "effect": "ask" },
     { "action": "shell", "resource": "git status *", "effect": "allow" },
     { "action": "shell", "resource": "git diff *", "effect": "allow" },
     { "action": "shell", "resource": "npm test *", "effect": "allow" },
     { "action": "shell", "resource": "git push *", "effect": "deny" },
-
-    // Env files: deny every action whose resource names one. Last, so it wins.
     { "action": "*", "resource": "*.env*", "effect": "deny" },
     { "action": "*", "resource": "*.env.example", "effect": "allow" },
   ],
