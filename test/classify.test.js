@@ -12,3 +12,5 @@ test("damage with money back goes to refund", () =>
   assert.equal(classify("The box showed up crushed and I want my money back"), "refund"))
 test("delivery delay goes to shipping", () =>
   assert.equal(classify("Where is my delivery? It has been two weeks"), "shipping"))
+test("tracking issue goes to shipping", () =>
+  assert.equal(classify("Where is my parcel? The tracking page has not moved"), "shipping"))

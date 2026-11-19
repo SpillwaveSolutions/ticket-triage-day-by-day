@@ -1,3 +1,3 @@
 - Run `npm test` before you say a change is done, and report the result.
-- Source lives in `src/` and tests in `test/` (Node's built-in runner with `node:assert/strict`).
+- Source lives in `src/` and tests in `test/` (Node's built-in runner with `node:assert/strict`); every keyword added to `src/classify.js` gets a test that uses it.
 - Ask before you edit anything under `.opencode/`.
