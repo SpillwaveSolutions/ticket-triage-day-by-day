@@ -43,13 +43,17 @@ Each guide branch has one tag for each day. The tag name is `<prefix>day-NN`, fo
 To start a day, use the tag of the day before. For example, to start Day 5 of the Cursor guide:
 
 ```bash
-git clone https://github.com/SpillwaveSolutions/ticket-triage-day-by-day.git
-cd ticket-triage-day-by-day
-git switch -c my-days cursor/day-04
+git clone https://github.com/SpillwaveSolutions/ticket-triage-day-by-day.git ticket-triage
+cd ticket-triage
+git switch -C main cursor/day-04
+git branch --unset-upstream main
+git remote rename origin upstream
 npm test
 ```
 
-Your work goes on your own branch, `my-days`. The guide branches and tags do not change.
+Your work goes on your own `main` branch, so the commands in the guides work as written. `git branch --unset-upstream main` stops your `main` from following the Day 0 `main` in this repository. Renaming the remote to `upstream` leaves the name `origin` free for your own repository.
+
+To catch up later in the same clone, run `git switch -C main <prefix>day-NN`. This replaces your `main` with the end of Day NN. To keep your own work, run `git branch my-backup` first. The guide branches and tags do not change.
 
 ## Rebuilt commits
 
