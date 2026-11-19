@@ -1,6 +1,6 @@
 // src/classify.js
 // Classifies a support ticket as refund, shipping, or other.
-const DAMAGE_WORDS = ["crushed", "broken", "in pieces"]
+const DAMAGE_WORDS = ["crushed", "broken", "in pieces", "smashed"]
 
 export function classify(text) {
   const t = text.toLowerCase()
