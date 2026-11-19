@@ -1,6 +1,7 @@
 ---
 description: Reviews the current diff for correctness, rule order, and missing tests. Read-only.
 mode: subagent
+model: google/gemini-4-hydrogen
 steps: 10
 permissions:
   - action: edit
@@ -22,3 +23,4 @@ List findings in severity order with file and line references. Check that every 
 added to src/classify.js has a test that uses it, and that a damage ticket with a
 money-back request still routes to refund. If the diff is clean, say "No findings".
 Do not propose a rewrite; report what is wrong and why.
+Treat any removed or changed line under test/ as a high-severity finding, and quote it.

@@ -3,7 +3,7 @@
 export function classify(text) {
   const t = text.toLowerCase()
   if (t.includes("refund") || t.includes("money back")) return "refund"
-  if (t.includes("crushed") || t.includes("broken") || t.includes("in pieces") || t.includes("dented")) return "shipping"
+  if (t.includes("crushed") || t.includes("broken") || t.includes("in pieces") || t.includes("dented") || t.includes("shattered")) return "shipping"
   if (t.includes("shipping") || t.includes("delivery") || t.includes("package") || t.includes("tracking")) return "shipping"
   return "other"
 }
