@@ -1,0 +1,3 @@
+- Run `npm test` before you say a change is done.
+- Never change an existing test to make it pass.
+- Categories are exactly `refund`, `shipping`, and `other`.
