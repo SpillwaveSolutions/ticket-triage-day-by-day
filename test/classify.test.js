@@ -18,3 +18,4 @@ test("dented lid", () => assert.equal(classify("The lid arrived dented"), "shipp
 test("dented lid, money back", () => assert.equal(classify("The lid arrived dented and I want my money back"), "refund"))
 test("shattered mug", () => assert.equal(classify("The mug arrived shattered"), "shipping"))
 test("smashed plate", () => assert.equal(classify("The plate arrived smashed"), "shipping"))
+test("chipped jar", () => assert.equal(classify("The jar arrived chipped"), "shipping"))
