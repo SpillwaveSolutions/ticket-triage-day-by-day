@@ -14,3 +14,5 @@ test("delivery delay goes to shipping", () =>
   assert.equal(classify("Where is my delivery? It has been two weeks"), "shipping"))
 test("tracking issue goes to shipping", () =>
   assert.equal(classify("Where is my parcel? The tracking page has not moved"), "shipping"))
+test("dented lid", () => assert.equal(classify("The lid arrived dented"), "shipping"))
+test("dented lid, money back", () => assert.equal(classify("The lid arrived dented and I want my money back"), "refund"))
