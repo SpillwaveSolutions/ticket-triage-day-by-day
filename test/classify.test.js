@@ -17,3 +17,4 @@ test("tracking issue goes to shipping", () =>
 test("dented lid", () => assert.equal(classify("The lid arrived dented"), "shipping"))
 test("dented lid, money back", () => assert.equal(classify("The lid arrived dented and I want my money back"), "refund"))
 test("shattered mug", () => assert.equal(classify("The mug arrived shattered"), "shipping"))
+test("smashed plate", () => assert.equal(classify("The plate arrived smashed"), "shipping"))

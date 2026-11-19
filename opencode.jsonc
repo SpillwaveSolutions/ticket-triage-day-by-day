@@ -20,5 +20,6 @@
     { "action": "shell", "resource": "git push *", "effect": "deny" },
     { "action": "*", "resource": "*.env*", "effect": "deny" },
     { "action": "*", "resource": "*.env.example", "effect": "allow" },
+    { "action": "edit", "resource": "~/.config/opencode/*", "effect": "deny" },
   ],
 }
