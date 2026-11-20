@@ -6,8 +6,8 @@ import { classify } from "../src/classify.js"
 test("refund", () => assert.equal(classify("I want my money back"), "refund"))
 test("shipping", () => assert.equal(classify("Where is my package?"), "shipping"))
 test("other", () => assert.equal(classify("Hello"), "other"))
-test("crushed mug in pieces is other", () =>
+test("crushed mug in pieces is shipping", () =>
   assert.equal(
     classify("The box showed up crushed and the mug inside is in pieces"),
-    "other"
+    "shipping"
   ))

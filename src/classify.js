@@ -3,6 +3,6 @@
 export function classify(text) {
   const t = text.toLowerCase()
   if (t.includes("refund") || t.includes("money back")) return "refund"
-  if (t.includes("shipping") || t.includes("delivery") || t.includes("package")) return "shipping"
+  if (t.includes("shipping") || t.includes("delivery") || t.includes("package") || t.includes("crushed")) return "shipping"
   return "other"
 }
