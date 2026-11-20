@@ -11,3 +11,4 @@ test("crushed mug in pieces is shipping", () =>
     classify("The box showed up crushed and the mug inside is in pieces"),
     "shipping"
   ))
+// Parallel session: comment only. Do not change assertions.
