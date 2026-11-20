@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "type": "command",
+        "bash": "node ./scripts/deny-git-push.js",
+        "powershell": "node ./scripts/deny-git-push.js",
+        "cwd": "."
+      }
+    ]
+  }
+}
