@@ -28,7 +28,7 @@ The `main` branch holds the Day 0 starting point. Every guide starts from these 
 | OpenAI Codex, Day-to-Day | `codex` | `codex/` | [Part 1](https://spillwave.com/guides/codex/part-01-install/) |
 | OpenCode, Day-to-Day | `opencode` | `opencode/` | [Part 1](https://spillwave.com/guides/opencode/part-01-install/) |
 | Pi, Day to Day | `pi` | `pi/` | [Part 1](https://spillwave.com/guides/pi/part-01-install/) |
-| GitHub Copilot, Day-to-Day | planned | `copilot/` | [Part 1](https://spillwave.com/guides/github_copilot/part-01-you-already-have-copilot/) |
+| GitHub Copilot, Day-to-Day | `copilot` | `copilot/` | [Part 1](https://spillwave.com/guides/github_copilot/part-01-you-already-have-copilot/) |
 
 The guides use different tools, so the branches do not have the same code. Use the branch for your guide.
 
